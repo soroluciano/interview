@@ -7,9 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Simulation of a service, currently is not being connected to database
+ *
+ */
 @Service
 public class ChallengeService {
 
+    /**
+     *
+     * @param level easy, hard
+     * @return list of Challenge
+     */
     public List<Challenge> getFilteredChallengeListByLevel(String level) {
         List<Challenge> challenges = getChallenges();
         List<Challenge> filteredChallenges;
@@ -17,6 +26,10 @@ public class ChallengeService {
         return filteredChallenges;
     }
 
+    /**
+     *
+     * @return List<Challenge>
+     */
     private List<Challenge> getChallenges() {
         List<Challenge> challenges = new ArrayList<>();
 
